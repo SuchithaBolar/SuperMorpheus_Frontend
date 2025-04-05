@@ -147,7 +147,7 @@ const AddMemberForm = () => {
           onChange={(e) => setAuthor(e.target.value)}
           className="w-full border p-2 rounded"
         />
-        {errors.author && <p className="text-red-500 text-sm mt-1">{errors.author}</p>}
+        {errors.author && <p className="error-message">{errors.author}</p>}
       </div>
 
       <div>
@@ -158,7 +158,7 @@ const AddMemberForm = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="w-full border p-2 rounded"
         />
-        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+        {errors.email && <p className="error-message">{errors.email}</p>}
       </div>
 
       <button
