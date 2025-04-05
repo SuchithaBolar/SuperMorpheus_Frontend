@@ -1,0 +1,28 @@
+.member-card {
+    background-color: #253156;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-text {
+    font-size: 1.1rem;
+    color: #92c640;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+  }
+  
+  .member-author {
+    font-size: 0.95rem;
+    color: #f6ecec;
+    margin-top: 0.25rem;
+  }
+  
