@@ -1,72 +1,3 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-
-// const AddMemberForm = () => {
-//   const [text, setText] = useState('');
-//   const [author, setAuthor] = useState('');
-//   const [email, setEmail] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       const response = await axios.post('http://localhost:5000/api/members', {
-//         text,
-//         author,
-//         email,
-//       });
-
-//       console.log('Member added:', response.data);
-//       // Optionally reset form
-//       setText('');
-//       setAuthor('');
-//       setEmail('');
-//       alert('Motivational message added successfully!');
-//     } catch (error) {
-//       console.error('Error adding member:', error.response?.data || error.message);
-//       alert('Something went wrong while adding the member.');
-//     }
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4 bg-white rounded shadow">
-//       <input
-//         type="text"
-//         placeholder="Enter motivational text"
-//         value={text}
-//         onChange={(e) => setText(e.target.value)}
-//         required
-//         className="w-full border p-2 rounded"
-//       />
-//       <input
-//         type="text"
-//         placeholder="Enter author name"
-//         value={author}
-//         onChange={(e) => setAuthor(e.target.value)}
-//         required
-//         className="w-full border p-2 rounded"
-//       />
-//       <input
-//         type="email"
-//         placeholder="Enter email"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//         required
-//         className="w-full border p-2 rounded"
-//       />
-//       <button
-//         type="submit"
-//         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-//       >
-//         Add Member
-//       </button>
-//     </form>
-//   );
-// };
-
-// export default AddMemberForm;
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -78,6 +9,9 @@ const AddMemberForm = () => {
   const [author, setAuthor] = useState('');
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({});
+  const [joiningDate, setJoiningDate] = useState('');
+const [interests, setInterests] = useState('');
+
 
   const validate = () => {
     const newErrors = {};
@@ -112,7 +46,10 @@ const AddMemberForm = () => {
         text,
         author,
         email,
+        joiningDate,
+        interests: interests.split(',').map((i) => i.trim())
       });
+      
 
       toast.success('🎉 Motivation added successfully!');
       setText('');
@@ -160,6 +97,27 @@ const AddMemberForm = () => {
         />
         {errors.email && <p className="error-message">{errors.email}</p>}
       </div>
+
+      <div className="form-group">
+  <label htmlFor="joining-date">Select Joining Date</label>
+  <input
+    id="joining-date"
+    type="date"
+    value={joiningDate}
+    onChange={(e) => setJoiningDate(e.target.value)}
+  />
+</div>
+
+
+<div>
+  <input
+    type="text"
+    placeholder="Enter interests (comma-separated)"
+    value={interests}
+    onChange={(e) => setInterests(e.target.value)}
+  />
+</div>
+
 
       <button
         type="submit"
