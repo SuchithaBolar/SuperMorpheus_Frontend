@@ -23,7 +23,7 @@ This is a React-based frontend for adding and viewing motivational quotes from m
 
 ## 📁 Folder Structure:
 
-<pre> SuperMorpheus_Frontend/ ├── index.html └── src/ ├── App.jsx ├── main.jsx ├── components/ │ ├── AddMemberForm.jsx │ ├── MemberCard.jsx │ └── FilterSortBar.jsx └── styles/ ├── AddMemberForm.css ├── FilterSortBar.css └── MemberCard.css </pre>
+<pre> SuperMorpheus_Frontend/ supermorpheus/ ├── index.html └── src/ ├── App.jsx ├── main.jsx ├── components/ │ ├── AddMemberForm.jsx │ ├── MemberCard.jsx │ └── FilterSortBar.jsx └── styles/ ├── AddMemberForm.css ├── FilterSortBar.css └── MemberCard.css </pre>
 
 ## 🧪 Features:
 
