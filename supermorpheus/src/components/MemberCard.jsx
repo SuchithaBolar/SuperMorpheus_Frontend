@@ -7,6 +7,7 @@ function MemberCard({ member }) {
     <div className="member-card">
       <p className="member-text">"{member.text}"</p>
       <p className="member-author">— {member.author}</p>
+      <p className="member-id">— {member._id}</p>
       {/* <p className="member-author">— {member.email}</p> */}
     </div>
   );
