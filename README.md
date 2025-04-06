@@ -3,11 +3,11 @@ This is a React-based frontend for adding and viewing motivational quotes from m
 
 **🚀 How to Run the App:**
 1. Install Dependencies
--cd SuperMorpheus_Frontend/supermorpheus
--npm install
+cd SuperMorpheus_Frontend/supermorpheus
+npm install
 
 **3. Start the Frontend App:**
--npm run dev
+npm run dev
 ⚠️ Ensure the backend is running on http://localhost:5000.
 
 **📦 Tech Stack:**
