@@ -1,12 +1,59 @@
-# React + Vite
+# Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Watch the video]](https://drive.google.com/file/d/1btZJ3LJeiVIu3bcw4nnPGEGjDJ86pAB-/view?usp=drive_link)
 
-Currently, two official plugins are available:
+# Frontend – SuperMorpheus App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a React-based frontend for adding and viewing motivational quotes from members.
 
-## Expanding the ESLint configuration
+## 🚀 How to Run the App:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install Dependencies
+
+- cd SuperMorpheus_Frontend/supermorpheus
+- npm install
+
+## 3. Start the Frontend App:
+
+- npm run dev
+- ⚠️ Ensure the backend is running on http://localhost:5000.
+
+## 📦 Tech Stack:
+
+- React (Vite) – Fast frontend build setup
+- Axios – For making API calls
+- React Toastify – For displaying success/error messages
+- Custom CSS – Lightweight and responsive styling
+
+## 📁 Folder Structure:
+
+<pre> SuperMorpheus_Frontend/ supermorpheus/ ├── index.html └── src/ ├── App.jsx ├── main.jsx ├── components/ │ ├── AddMemberForm.jsx │ ├── MemberCard.jsx │ └── FilterSortBar.jsx └── styles/ ├── AddMemberForm.css ├── FilterSortBar.css └── MemberCard.css </pre>
+
+## 🧪 Features:
+
+- ✅ Add motivational quotes (with proper validation)
+- ✅ Display success and error toasts for better UX
+- ✅ View a list of quotes with filtering & sorting options
+- ✅ Clean and responsive UI design
+
+## 🛡️ Input Validation Rules:
+
+- Text Minimum 5 characters
+- Author Minimum 2 characters
+- Email Must be in a valid format
+
+🔔 Toast Notifications:
+
+- Using react-toastify for real-time feedback:
+
+### ✅ Success:
+
+- "🎉 Motivation added successfully!"
+
+### ❌ Error:
+
+- "🚫 Please fix validation errors / Server errors"
+
+## Install Toastify if not already done:
+
+- npm install react-toastify
